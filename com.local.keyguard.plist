@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>com.local.disable-key</string>
+    <string>com.local.keyguard</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/usr/local/bin/disable-key</string>
+        <string>/usr/local/bin/keyguard</string>
         <string>dnd</string>
     </array>
     <key>RunAtLoad</key>
@@ -14,8 +14,8 @@
     <key>KeepAlive</key>
     <true/>
     <key>StandardOutPath</key>
-    <string>/tmp/disable-key.log</string>
+    <string>/tmp/keyguard.log</string>
     <key>StandardErrorPath</key>
-    <string>/tmp/disable-key.log</string>
+    <string>/tmp/keyguard.log</string>
 </dict>
 </plist>

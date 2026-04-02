@@ -3,18 +3,18 @@ CFLAGS = -Wall -Wextra -O2
 FRAMEWORKS = -framework CoreGraphics -framework ApplicationServices
 PREFIX = /usr/local
 
-all: disable-key snoop-key
+all: keyguard snoop-key
 
-disable-key: disable-key.c
+keyguard: keyguard.c
 	$(CC) $(CFLAGS) -o $@ $< $(FRAMEWORKS)
 
 snoop-key: snoop-key.c
 	$(CC) $(CFLAGS) -o $@ $< $(FRAMEWORKS)
 
-install: disable-key
-	install -m 755 disable-key $(PREFIX)/bin/disable-key
+install: keyguard
+	install -m 755 keyguard $(PREFIX)/bin/keyguard
 
 clean:
-	rm -f disable-key snoop-key
+	rm -f keyguard snoop-key
 
 .PHONY: install clean
